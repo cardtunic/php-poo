@@ -11,6 +11,7 @@ class Estudar {
 	// MÉTODOS
 	
 	function estudar() {
+        // Estuda um assunto, utilizando um método, durante um período em determinado local, mudando assim o estado estudando para verdadeiro (somente caso o estado atual estudando seja falso)
         if (!$this->estudando) {
             echo "<p>Estudando o assunto $this->assunto...";
             echo "<p>Usando o métdo $this->metodo";
@@ -23,7 +24,7 @@ class Estudar {
         }
 
     }
-	function pausa() {
+	function pausa() { // Pausa os estudos, mudando o estado de estudando para falso
         if ($this->estudando) {
             echo "<p>Dando uma pausa!</p>";
             $this->estudando = false;
